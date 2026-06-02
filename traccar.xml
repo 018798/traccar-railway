@@ -7,7 +7,7 @@
   <entry key='database.url'>jdbc:h2:/opt/traccar/data/database</entry>
   <entry key='database.user'>sa</entry>
   <entry key='database.password'></entry>
-  <entry key='logger.level'>ALL</entry>
+  <entry key='logger.level'>INFO</entry>
   <entry key='logger.file'>/dev/stdout</entry>
   <entry key='h02.port'>5027</entry>
 </properties>
