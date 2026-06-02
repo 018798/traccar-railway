@@ -16,4 +16,5 @@ cat > /opt/traccar/conf/traccar.xml << EOF
 </properties>
 EOF
 
+echo "Connecting to: ${JDBC_URL}"
 exec /opt/traccar/jre/bin/java -jar /opt/traccar/tracker-server.jar /opt/traccar/conf/traccar.xml
