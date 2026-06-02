@@ -1,7 +1,8 @@
 #!/bin/sh
-# Railway provides DATABASE_URL as postgresql://user:pass@host:port/db
-# Traccar needs jdbc: prefix
-JDBC_URL="jdbc:${DATABASE_URL}"
+# Railway DATABASE_PUBLIC_URL is postgres://user:pass@host:port/db
+# Strip scheme, force jdbc:postgresql://
+DB_URL_NO_SCHEME="${DATABASE_PUBLIC_URL#*://}"
+JDBC_URL="jdbc:postgresql://${DB_URL_NO_SCHEME}"
 
 cat > /opt/traccar/conf/traccar.xml << EOF
 <?xml version='1.0' encoding='UTF-8'?>
