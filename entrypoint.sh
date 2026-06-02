@@ -1,11 +1,6 @@
 #!/bin/sh
-echo "PATH=$PATH"
-echo "--- /opt contents ---"
-ls /opt/
-echo "--- /usr/bin/java ---"
-ls /usr/bin/java 2>&1
-echo "--- /usr/local/bin/java ---"
-ls /usr/local/bin/java 2>&1
-echo "--- which java ---"
-which java 2>&1
+echo "--- /opt/traccar contents ---"
+ls /opt/traccar/
+echo "--- finding java in /opt/traccar ---"
+find /opt/traccar -name "java" -type f 2>/dev/null
 sleep 30
