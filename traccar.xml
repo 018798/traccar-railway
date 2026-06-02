@@ -9,5 +9,5 @@
   <entry key='database.password'></entry>
   <entry key='logger.level'>ALL</entry>
   <entry key='logger.file'>/dev/stdout</entry>
-  <entry key='gt06.port'>5027</entry>
+  <entry key='h02.port'>5027</entry>
 </properties>
