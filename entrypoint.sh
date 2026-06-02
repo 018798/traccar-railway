@@ -11,7 +11,6 @@ DB_PORT="${PORTDB%%/*}"
 DB_NAME="${PORTDB#*/}"
 
 JDBC_URL="jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}?sslmode=require"
-echo "Connecting to: ${JDBC_URL} as ${DB_USER}"
 
 cat > /opt/traccar/conf/traccar.xml << EOF
 <?xml version='1.0' encoding='UTF-8'?>
