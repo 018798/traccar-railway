@@ -12,4 +12,4 @@ cat > /opt/traccar/conf/traccar.xml << EOF
   <entry key='h02.port'>5027</entry>
 </properties>
 EOF
-exec /opt/traccar/bin/startup.sh
+exec java -jar /opt/traccar/lib/tracker-server.jar /opt/traccar/conf/traccar.xml
