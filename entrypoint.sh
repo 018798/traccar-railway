@@ -1,7 +1,7 @@
 #!/bin/sh
 # Railway DATABASE_PUBLIC_URL is postgres://user:pass@host:port/db
 # Strip scheme, force jdbc:postgresql://
-DB_URL_NO_SCHEME="${DATABASE_URL#*://}"
+DB_URL_NO_SCHEME="${DATABASE_PUBLIC_URL#*://}"
 JDBC_URL="jdbc:postgresql://${DB_URL_NO_SCHEME}?sslmode=require"
 
 cat > /opt/traccar/conf/traccar.xml << EOF
